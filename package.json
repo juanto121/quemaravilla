@@ -14,7 +14,10 @@
     "connect-flash": "^0.1.1",
     "ejs": "^2.5.1",
     "express": "^4.13.4",
+    "googlemapsutil": "^0.1.7",
+    "messenger-bot": "^2.4.0",
     "morgan": "^1.7.0",
+    "node-discover": "^0.6.2",
     "watson-developer-cloud": "^2.9.0"
   }
 }
