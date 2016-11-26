@@ -2,6 +2,7 @@
 const Bot = require('messenger-bot');
 const conversation = require('./conversation');
 const sender = require('./sender-api');
+const request = require('request');
 
 let bot = new Bot({
 	token: 'EAAPH7WFMNukBALug5SsH84GnZCdZAhjBc5sl5GIjJZAPMRBDscZCrVwxna9Yc2teL9iOrH1ierh5WWNoeZBLSLdOvlI2h1JWRwIgLlkXNEjxPVY97qYHZBz7B052obZCsPqyFraclv2fqTBwm58uubjhUViuuxazVyrJRhYdlV4zwZDZD',
@@ -92,7 +93,18 @@ function duration(user, context, payload){
 function location(user, context, payload){
 	var content = sender.plainText("Voy a buscar los mejores destinos para tu visita.");
 	var message = sender.headerMessage(user, content);
-	console.log(conversation.getContext());
+	console.log('CONTEXT:' + JSON.stringify(conversation.getContext()));
+
+	//Personality Insights call
+	/*
+	const url = '';
+	request(url, function(err, res, body){
+		if(!err){
+
+		}
+	});
+	*/
+
 	return message;
 }
 
