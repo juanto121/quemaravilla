@@ -28,7 +28,7 @@ exports.reply = function(message, callback){
 				cmd = "NOP";
 			}
 
-			callback(null, convContext);
+			callback(null, convContext, res);
 		}else{
 			console.log('Conversation err');
 			callback(err);
