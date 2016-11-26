@@ -1,0 +1,408 @@
+/*
+ * Template 2081 Solution
+ * http://www.tooplate.com/view/2081-solution
+ */
+body {
+	background: #ffffff;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	position: relative;
+}
+
+h2, h3, h4 {
+	font-weight: bold;
+}
+
+p {
+	line-height: 26px;
+}
+
+/* start all section */
+#service,
+#divider,
+#about,
+#team,
+#portfolio,
+#client,
+#contact {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	position: relative;
+}
+.navbar-brand>img {
+	display: block;
+	height: 61px;
+	width: 46px;
+}
+/* end all section */
+
+/* start nagivation */
+.navbar-default {
+	background: #fff;
+	border: none;
+	box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+	margin: 0 !important;
+	padding: 0;
+}
+
+.navbar-default .navbar-brand {
+	padding-top: 4px;
+	padding-bottom: 60px;
+}
+
+.navbar-default .navbar-nav li a {
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 35px;
+}
+
+.navbar-default .navbar-nav li a:hover {
+	color: #93ca3a;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+	color: #93ca3a;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+	border: none;
+	padding-top: 16px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background: #93ca3a;
+	border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	background-color: transparent
+}
+.navbar-header span.title {
+	float: left;
+	padding-top: 22px;
+}
+/* end navigation */
+
+/* start home */
+#home {
+	padding-top: 65px;
+}
+
+.flexslider {
+	margin: 0 0 60px;
+	background: #fff;
+	padding: 0;
+	position: relative;
+	zoom: 1;
+	background-color: #371604;
+	overflow: hidden;
+	margin: 0;
+}
+
+.flexslider .slides {
+	padding: 0;
+	zoom: 1;
+}
+
+.flexslider .slides img {
+	width: 100%;
+	min-width: 648px;
+	min-height: 270px;
+	display: block;
+}
+
+.flexslider .slides>li {
+	display: none;
+	padding: 0;
+	position: relative;
+	-webkit-backface-visibility: hidden;
+}
+
+.flexslider img {
+	position: relative;
+	width: 100%;
+}
+
+.slider-caption {
+	color: white;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-transform: uppercase;
+	z-index: 7;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.flexslider .btn {
+	background: #0084ff;
+	background-image: none;
+	border: 1px solid #0084ff;
+	border-radius: 4px;
+	color: #fff;
+	font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	margin: 40px 0 0 0;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	height: 45px;
+	width: 250px;
+	padding: 12px 10px 10px 10px;
+}
+
+.flexslider .btn:hover,
+.flexslider .btn:focus {
+	background-color: #0077e5;
+	opacity: .2;
+}
+/* end home */
+
+/* start about */
+#about h3 {
+	color: #93ca3a;
+	font-size: 40px;
+	padding-bottom: 10px;
+}
+
+#about h4 {
+	padding-bottom: 10px;
+}
+
+#about .progress {
+	border-radius: 4px;
+	background: #ffffff;
+	height: 6px;
+}
+
+#about .progress .progress-bar-danger {
+	background: #93ca3a;
+}
+
+#about .text-top {
+	padding-top: 50px;
+}
+
+#about span {
+	display: block;
+	padding-bottom: 10px;
+}
+
+#about small {
+	font-weight: bold;
+	padding-left: 200px;
+}
+/* end about */
+
+/* start contact */
+#contact {
+	background: url('../images/contact-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #ffffff;
+}
+
+#contact h3 {
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+#contact .fa {
+	color: #93ca3a;
+	font-size: 18px;
+	padding-bottom: 14px;
+}
+
+#contact .form-control {
+	background: #f2f2f2;
+	border-radius: 4px;
+	box-shadow: none;
+	margin-bottom: 20px;
+	transition: all 0.4s ease-in-out;
+}
+
+#contact input {
+	height: 50px;
+}
+
+#contact input[type="submit"] {
+	color: #202020;
+	font-weight: bold;
+	margin-bottom: 80px;
+}
+
+#contact input[type="submit"]:hover {
+	background: #93ca3a;
+}
+
+#contact .form-control::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+#contact .form-control:-ms-input-placeholder {
+	color: #666;
+}
+
+#contact .form-control::-webkit-input-placeholder {
+	color: #666;
+}
+/* end contact */
+
+/* start footer */
+footer {
+	background: #fff;
+	border-top: 1px solid #93ca3a;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+footer p {
+	line-height: 12px;
+}
+
+footer .social-icon {
+	top: 0px;
+}
+
+footer .container .col-md-4 {
+	padding: 0;
+}
+
+footer .container .col-md-4.pull-right {
+	padding-bottom: 5px;
+	padding-top: 10px;
+}
+
+footer .container .col-md-4 p {
+	float: right;
+	padding-top: 14px;
+	padding-right: 20px;
+}
+
+footer .container .col-md-4 img {
+	height: 60px;
+}
+
+footer .container .col-md-4 img.powered {
+	float: right;
+	height: 40px;
+}
+
+/* end footer */
+.too-icon {
+	padding: 10px;
+}
+
+/* start social icon */
+.social-icon {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	top: 20px;
+}
+
+.social-icon li {
+	display: inline-block;
+	list-style: none;
+}
+
+.social-icon li a {
+	color: #333;
+	font-size: 13px;
+	text-decoration: none;
+	transition: all 0.4s ease-in-out;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.social-icon li a:hover {
+	background: #f2f2f2;
+}
+/* end social icon */
+
+/*Hashtag*/
+.twitter-timeline {
+	float: right;
+}
+/*end Hashtag*/
+@media only screen and (max-width: 1199px) {
+	.flexslider h1 {
+		font-size: 30px;
+	}
+	.flexslider h2 {
+		font-size: 24px;
+	}
+}
+
+/* start templatemo 768 media quires */
+@media only screen and ( max-width: 768px ) {
+	.navbar-default .navbar-brand {
+		margin-left: 20px;
+	}
+	.navbar-default .navbar-nav {
+		margin: 0;
+	}
+	.navbar-default .navbar-collapse {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.flexslider h1 {
+		font-size: 26px;
+	}
+	.flexslider h2 {
+		font-size: 18px;
+	}
+	.templatemo-slider-btn {
+		margin-top: 10px;
+		width: 180px;
+		height: 40px;
+		padding-top: 8px;
+	}
+}
+/* end templatemo 768 media quires */
+
+/* start templatemo 600 media quires */
+@media only screen and ( max-width: 640px ) {
+	.flexslider h1 {
+		font-size: 20px;
+	}
+	.flexslider h2 {
+		font-size: 14px;
+	}
+	.templatemo-slider-btn {
+		width: auto;
+		height: auto;
+		padding: 10px 20px;
+		margin-top: 10px;
+	}
+}
+/* end templatemo 600 media quires */
+
+/* start templatemo 360 media quires */
+@media only screen and ( max-width: 360px ) {
+	#team .col-md-4 {
+		padding-top: 40px;
+	}
+}
+/* end templatemo 360 media quires */
