@@ -1,10 +1,4 @@
-# express-starter-template
-Template for new Node projects
+# Que Maravilla 
+Dime cuanto tiempo tienes y te dire para dónde vas.
 
-## Uses
-* Express
-* Body Parser
-* Ejs
-* Morgan
-* Connect Flash
 
