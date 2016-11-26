@@ -14,6 +14,7 @@
     "connect-flash": "^0.1.1",
     "ejs": "^2.5.1",
     "express": "^4.13.4",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "watson-developer-cloud": "^2.9.0"
   }
 }
