@@ -14,9 +14,6 @@ var express		= require('express'),
 // Logs all HTTP requests
 app.use(morgan('dev'));
 
-// Parses request bodies before handling them.
-// enables: req.body
-// https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
