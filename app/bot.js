@@ -57,6 +57,9 @@ function filterCommand(context){
 		case 'party':
 			executable = party;
 			break;
+		case 'time':
+			executable = time;
+			break;
 
 	}
 	return executable;
@@ -86,9 +89,10 @@ function duration(user, context, payload){
 	return message;
 }
 
-function location(user, context){
+function location(user, context, payload){
 	var content = sender.plainText("Voy a buscar los mejores destinos para tu visita.");
 	var message = sender.headerMessage(user, content);
+	console.log(conversation.getContext());
 	return message;
 }
 

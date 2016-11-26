@@ -8,7 +8,7 @@ let conversation = watson.conversation({
 	version_date: '2016-09-20'
 });
 
-var context = {};
+var context = null;
 
 exports.reply = function(message, callback){
 	conversation.message({
@@ -21,9 +21,16 @@ exports.reply = function(message, callback){
 			var convContext = res.context;
 			console.log(JSON.stringify(res));
 
+			saveContextIntent(res);
+
 			if(convContext && convContext.command){
 				cmd = convContext.command;
-				context = convContext;
+				if(context){
+                    context.system = convContext.system;
+				}else{
+					context = convContext;
+				}
+
 			}else{
 				cmd = "NOP";
 			}
@@ -35,3 +42,15 @@ exports.reply = function(message, callback){
 		}
 	});
 };
+
+exports.getContext = function(){
+	return context;
+};
+
+function saveContextIntent(res){
+	var _ent = res.entities;
+	if(_ent && _ent.length>0){
+		var entity = _ent[0];
+		context[entity.entity] = entity.value;
+	}
+}
