@@ -106,18 +106,16 @@ function location(user, context, payload){
 
 	//Personality Insights call
 	const url = 'http://personality-insights-nodejs-promo-1810.mybluemix.net/api/profile/twitter';
-	var data = {"source_type":"twitter","accept_language":"en","include_raw":false,"language":"ja","userId":"faridyu"};
-	bot.sendSenderAction(Number(user), "typing_on", function(err, info){console.log(err,info)});
+	var data = {"source_type":"twitter","accept_language":"en","include_raw":false,"language":"ja","userId":"KingJames"};
 
     request({
         url: url,
         method:'POST',
         json: data
     }, function(err, res, body){
-        if(err){
+        if(err && body){
             console.log('error','Error while using personality insights', err);
         }else{
-            bot.sendSenderAction(Number(user), "typing_off", function(err, info){console.log(err,info)});
         	var big5 = body.raw_v3_response.personality;
         	var personality = [];
         	for(var i = 0; i < big5.length; i++){

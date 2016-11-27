@@ -12,6 +12,8 @@ exports.pareto = function(origin, personality, callback){
         var params = require('./data/TOA_hotel_10.json');
     }
 
+    linearCombination(personality, params);
+
     tradeoff_analytics.dilemmas(params, function(err, res) {
         if (err) {
             console.log(err);
