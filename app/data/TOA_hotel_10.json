@@ -237,10 +237,11 @@
       }
     },
     {
-      "key": 12,
+      "key": 11,
       "name": "Museo Carlos Gardel Medellin",
       "description": "Un museo excepcional",
       "url": "http://www.portafolio.co/files/article_main/uploads/2016/02/06/56b66bb090336.jpeg",
+      "site": "https://es.wikipedia.org/wiki/Casa_Museo_Gardeliana",
       "values": {
         "distance": 10,
         "time": 10,
@@ -265,6 +266,6 @@
         "emotionalRange": 0.8,
         "opennes": 0.2
       }
-    }
+    } 
   ]
 }
