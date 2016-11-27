@@ -1,0 +1,160 @@
+{
+  "subject": "Rubelio",
+  "columns": [
+    {
+      "key": "distance",
+      "full_name": "Distance to destination",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "min",
+      "format": "number:0 | taPrefix:' km'",
+      "description": "Distance from your current hotel to the touristic venue"
+    },
+    {
+      "key": "time",
+      "full_name": "Time to destination",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "min",
+      "format": "number:0 | taSuffix:' min'",
+      "description": "Time from your current hotel to the touristic venue"
+    },
+    {
+      "key": "agreeableness",
+      "full_name": "Agreeableness",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "max",
+      "format": "number:0  | taSuffix:' PCTL'",
+      "range": {
+        "low": 0,
+        "high": 1
+      },
+      "description": "Is a person's tendency to be compassionate and cooperative toward others."
+    },
+    {
+      "key": "conscientiousness",
+      "full_name": "Conscientiousness",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "max",
+      "format": "number:0 | taSuffix:' PCTL'",
+      "range": {
+        "low": 0,
+        "high":1
+      },
+      "description": "Is a person's tendency to act in an organized or thoughtful way."
+    },
+    {
+      "key": "extraversion",
+      "full_name": "Extraversion",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "max",
+      "format": "number:0 | taSuffix:' PCTL'",
+      "range": {
+        "low": 0,
+        "high":1
+      },
+      "description": "Is a person's tendency to seek stimulation in the company of others."
+    },
+    {
+      "key": "emotionalRange",
+      "full_name": "Emotional Range",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "max",
+      "format": "number:1 | taSuffix:' PCTL'",
+      "range": {
+        "low": 0,
+        "high": 1
+      },
+      "description": "Is the extent to which a person's emotions are sensitive to the individual's environment."
+    },
+    {
+      "key": "opennes",
+      "full_name": "Opennes",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "max",
+      "format": "number:1 | taSuffix:' PCTL'",
+      "range": {
+        "low": 0,
+        "high": 1
+      },
+      "description": "Is the extent to which a person is open to experiencing a variety of activities."
+    }
+  ],
+  "options": [
+    {
+      "key": 1,
+      "name": "Museo de Antioquia",
+      "description": "Biggest art museum in the city",
+      "values": {
+        "distance": 10,
+        "time": 10,
+        "agreeableness": 0.99,
+        "conscientiousness": 0.99,
+        "extraversion":0.01,
+        "emotionalRange": 0.5,
+        "opennes": 0.01
+      }
+    },
+    {
+      "key": 2,
+      "name": "Parque Explora",
+      "description": "Biggest science and technology museum in the city",
+      "values": {
+        "distance": 10,
+        "time": 10,
+        "agreeableness": 0.01,
+        "conscientiousness": 0.99,
+        "extraversion":0.5,
+        "emotionalRange": 0.01,
+        "opennes": 0.99
+      }
+    },
+    {
+      "key": 3,
+      "name": "Parque Arví",
+      "description": "Biggest natural reserve in the city",
+      "values": {
+        "distance": 10,
+        "time": 10,
+        "agreeableness": 0.99,
+        "conscientiousness": 0.01,
+        "extraversion":0.01,
+        "emotionalRange": 0.01,
+        "opennes": 0.99
+      }
+    },
+    {
+      "key": 4,
+      "name": "Plaza Mayor",
+      "description": "Biggest convention centre in the city",
+      "values": {
+        "distance": 10,
+        "time": 10,
+        "agreeableness": 0.99,
+        "conscientiousness": 0.99,
+        "extraversion":0.99,
+        "emotionalRange": 0.01,
+        "opennes": 0.01
+      }
+    },
+    {
+      "key": 5,
+      "name": "Museo El Castillo",
+      "description": "Biggest castle in the city",
+      "values": {
+        "distance": 10,
+        "time": 10,
+        "agreeableness": 0.99,
+        "conscientiousness": 0.99,
+        "extraversion":0.01,
+        "emotionalRange": 0.99,
+        "opennes": 0.01
+      }
+    }
+  ]
+}

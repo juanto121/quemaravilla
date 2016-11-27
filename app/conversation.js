@@ -19,8 +19,6 @@ exports.reply = function(message, callback){
 		if(!err){
 			var cmd;
 			var convContext = res.context;
-			console.log(JSON.stringify(res));
-
 			saveContextIntent(res);
 			if(convContext && convContext.command){
 				cmd = convContext.command;
@@ -29,11 +27,9 @@ exports.reply = function(message, callback){
 				}else{
 					context = convContext;
 				}
-
 			}else{
 				cmd = "NOP";
 			}
-
 			callback(null, convContext, res);
 		}else{
 			console.log('Conversation err');

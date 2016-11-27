@@ -10,7 +10,7 @@ exports.headerMessage = function (userId, content){
         },
         message:content
     };
-}
+};
 
 /*
  Returns plain text message element
@@ -43,7 +43,8 @@ exports.image = function (content){
  */
 exports.genericTemplate = function (content){
     var elements = [];
-    for (var i=0; i<content.elements; i++){
+    var len = content.elements.length;
+    for (var i=0; i< len; i++){
         var item = content.elements[i];
         elements.push(exports.element(item));
     }
@@ -104,8 +105,14 @@ exports.element = function (content){
         image_url: content.imageUrl,
         subtitle: content.subtitle,
         buttons: content.buttons,
-        price: content.price,
-        currency:"COP"
     };
-}
+};
+
+exports.button = function(content){
+    return {
+        type:'postback',
+        title: content.title,
+        payload: content.payload
+    };
+};
 
