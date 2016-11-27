@@ -112,10 +112,10 @@ function location(user, context, payload){
         url: url,
         method:'POST',
         json: data
-    }, function(err, res, body){
-        if(err && body){
+    }, function(err, res, body) {
+        if (err && body) {
             console.log('error','Error while using personality insights', err);
-        }else{
+        } else {
         	var big5 = body.raw_v3_response.personality;
         	var personality = [];
         	for(var i = 0; i < big5.length; i++){
@@ -124,12 +124,12 @@ function location(user, context, payload){
         	var location = context["location"];
         	tradeoff.pareto(location, personality, function(err, results){
         		var elements = [];
-        		for(var k = 0; k < results.length;k++){
+        		for(var k = 0; k < results.length; k++){
                     var placeName = results[k].name;
                     var details = tradeoff.getOptionDetails(location,placeName);
                     var postButton = sender.postButton({title:'Más información',payload:details.name});
                     //var urlButton = sender.urlButton({title:'Ir a la página.',web_url:details.url});
-                    var element = sender.element({title:placeName,buttons:[postButton]});
+                    var element = sender.element({title:placeName,buttons:[postButton], image_url:details.url});
 					elements.push(element);
                 }
                 var generic = sender.genericTemplate({elements:elements});
