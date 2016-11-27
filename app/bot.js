@@ -96,14 +96,11 @@ function location(user, context, payload){
 	console.log('CONTEXT:' + JSON.stringify(conversation.getContext()));
 
 	//Personality Insights call
-	/*
-	const url = '';
-	request(url, function(err, res, body){
+	const url = 'http://personality-insights-nodejs-promo-1810.mybluemix.net/api/profile/twitter';
+	request.post({url:url}, function(err, res, body){
 		if(!err){
-
 		}
 	});
-	*/
 
 	return message;
 }
