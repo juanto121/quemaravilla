@@ -106,7 +106,7 @@ function location(user, context, payload){
 
 	//Personality Insights call
 	const url = 'http://personality-insights-nodejs-promo-1810.mybluemix.net/api/profile/twitter';
-	var data = {"source_type":"twitter","accept_language":"en","include_raw":false,"language":"ja","userId":"KingJames"};
+	var data = {"source_type":"twitter","accept_language":"en","include_raw":false,"language":"ja","userId":"faridyu"};
 
     request({
         url: url,

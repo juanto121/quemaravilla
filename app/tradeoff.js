@@ -12,9 +12,9 @@ exports.pareto = function(origin, personality, callback){
         var params = require('./data/TOA_hotel_10.json');
     }
 
-    linearCombination(personality, params);
+    var result = linearTransformation(personality, params);
 
-    tradeoff_analytics.dilemmas(params, function(err, res) {
+    tradeoff_analytics.dilemmas(result, function(err, res) {
         if (err) {
             console.log(err);
             callback(err);
@@ -24,6 +24,17 @@ exports.pareto = function(origin, personality, callback){
         }
     });
 };
+
+function linearTransformation(a,b){
+    var lena = a.length;
+    var lenb = b.length;
+    if(lena === lenb) {
+        for (var i = 0; i < lena; i++) {
+            b[i] *= a[i];
+        }
+    }
+    return b;
+}
 
 function filter(res){
     var resols = res.resolution.solutions;
