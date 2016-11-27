@@ -90,6 +90,7 @@
       "key": 1,
       "name": "Museo de Antioquia",
       "description": "Biggest art museum in the city",
+      "url": "https://www.museodeantioquia.co/",
       "values": {
         "distance": 10,
         "time": 10,
@@ -104,6 +105,7 @@
       "key": 2,
       "name": "Parque Explora",
       "description": "Biggest science and technology museum in the city",
+      "url": "www.parqueexplora.org/",
       "values": {
         "distance": 10,
         "time": 10,
@@ -118,6 +120,7 @@
       "key": 3,
       "name": "Parque Arví",
       "description": "Biggest natural reserve in the city",
+      "url": "www.parquearvi.org/",
       "values": {
         "distance": 10,
         "time": 10,
@@ -132,6 +135,7 @@
       "key": 4,
       "name": "Plaza Mayor",
       "description": "Biggest convention centre in the city",
+      "url": "www.plazamayor.com.co/",
       "values": {
         "distance": 10,
         "time": 10,
@@ -144,14 +148,45 @@
     },
     {
       "key": 5,
-      "name": "Museo El Castillo",
-      "description": "Biggest castle in the city",
+      "name": "Pueblito Paisa",
+      "description": "A typical colombian town in the city",
+      "url": "http://www.guiaturisticademedellin.com/index.php/es/atractivos/cerro-nutibara-pueblito-paisa-top/39-pueblito-paisa",
       "values": {
         "distance": 10,
         "time": 10,
         "agreeableness": 0.99,
         "conscientiousness": 0.99,
-        "extraversion":0.01,
+        "extraversion":0.99,
+        "emotionalRange": 0.01,
+        "opennes": 0.01
+      }
+    },
+    {
+      "key": 6,
+      "name": "MAMM",
+      "description": "Museo de Arte Moderno de Medellin",
+      "url": "www.elmamm.org/",
+      "values": {
+        "distance": 10,
+        "time": 10,
+        "agreeableness": 0.99,
+        "conscientiousness": 0.99,
+        "extraversion":0.2,
+        "emotionalRange": 0.99,
+        "opennes": 0.99
+      }
+    },
+    {
+      "key": 7,
+      "name": "Museo El Castillo",
+      "description": "Biggest castle in the city",
+      "url": "www.museoelcastillo.org/",
+      "values": {
+        "distance": 10,
+        "time": 10,
+        "agreeableness": 0.99,
+        "conscientiousness": 0.99,
+        "extraversion":0.99,
         "emotionalRange": 0.99,
         "opennes": 0.01
       }
