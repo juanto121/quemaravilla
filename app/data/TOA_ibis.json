@@ -87,38 +87,6 @@
   ],
   "options": [
     {
-      "key": 1,
-      "name": "Museo de Antioquia",
-      "description": "Biggest art museum in the city",
-      "url": "http://www.hotelsanpedrodelfuerte.com/wp-content/uploads/2016/07/museo-de-antioquia-en-medellin.jpg",
-      "site": "https://www.museodeantioquia.co/",
-      "values": {
-        "distance": 10,
-        "time": 40,
-        "agreeableness": 0.99,
-        "conscientiousness": 0.99,
-        "extraversion":0.01,
-        "emotionalRange": 0.5,
-        "opennes": 0.01
-      }
-    },
-    {
-      "key": 2,
-      "name": "Parque Explora",
-      "description": "Biggest science and technology museum in the city",
-      "url": "http://rumbiaderos.com/wp-content/uploads/2016/07/explora.jpg",
-      "site": "www.parqueexplora.org/",
-      "values": {
-        "distance": 7,
-        "time": 30,
-        "agreeableness": 0.01,
-        "conscientiousness": 0.99,
-        "extraversion":0.5,
-        "emotionalRange": 0.01,
-        "opennes": 0.99
-      }
-    },
-    {
       "key": 3,
       "name": "Parque Arví",
       "description": "Biggest natural reserve in the city",
@@ -132,38 +100,6 @@
         "extraversion":0.01,
         "emotionalRange": 0.01,
         "opennes": 0.99
-      }
-    },
-    {
-      "key": 4,
-      "name": "Plaza Mayor",
-      "description": "Biggest convention centre in the city",
-      "url": "http://www.viztaz.com.co/gantigua/galleries/Contemporaneas/plazamayor/1103670.jpg",
-      "site": "www.plazamayor.com.co/",
-      "values": {
-        "distance": 5,
-        "time": 25,
-        "agreeableness": 0.5,
-        "conscientiousness": 0.99,
-        "extraversion":0.99,
-        "emotionalRange": 0.01,
-        "opennes": 0.01
-      }
-    },
-    {
-      "key": 5,
-      "name": "Pueblito Paisa",
-      "description": "A typical colombian town in the city",
-      "url": "http://www.discovercolombia.com/wp-content/uploads/2010/10/pueblito_paisa_medellin.jpg",
-      "site": "www.guiatodo.com.co/Sitio/medellin/pueblito_paisa",
-      "values": {
-        "distance": 7,
-        "time": 20,
-        "agreeableness": 0.99,
-        "conscientiousness": 0.99,
-        "extraversion":0.99,
-        "emotionalRange": 0.01,
-        "opennes": 0.01
       }
     },
     {
@@ -244,22 +180,6 @@
         "extraversion":0.1,
         "emotionalRange": 0.95,
         "opennes": 0.8
-      }
-    },
-    {
-      "key": 11,
-      "name": "Museo Carlos Gardel Medellin",
-      "description": "Un museo excepcional",
-      "url": "http://www.portafolio.co/files/article_main/uploads/2016/02/06/56b66bb090336.jpeg",
-      "site": "https://es.wikipedia.org/wiki/Casa_Museo_Gardeliana",
-      "values": {
-        "distance": 8,
-        "time": 35,
-        "agreeableness": 0.6,
-        "conscientiousness": 0.2,
-        "extraversion":0.2,
-        "emotionalRange": 0.9,
-        "opennes": 0.5
       }
     },
     {
