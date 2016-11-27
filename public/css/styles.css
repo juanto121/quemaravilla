@@ -152,9 +152,9 @@ p {
 }
 
 .flexslider .btn {
-	background: #0084ff;
-	background-image: none;
-	border: 1px solid #0084ff;
+	background: url(../images/quemaravillalogo.png) no-repeat 5px 3px #0084ff;
+	background-size: 28px 41px;
+	border: 0;
 	border-radius: 4px;
 	color: #fff;
 	font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
@@ -163,8 +163,8 @@ p {
 	-webkit-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 	height: 45px;
-	width: 250px;
-	padding: 12px 10px 10px 10px;
+	width: 255px;
+	padding: 12px 10px 10px 37px;
 }
 
 .flexslider .btn:hover,
