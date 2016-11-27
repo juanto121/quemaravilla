@@ -1,0 +1,33 @@
+{
+	"lang": "es",
+	"dir": "ltr",
+	"name": "¡Qué maravilla!",
+	"description": "#HackatonCognitivo ¡Qué maravilla!",
+	"short_name": "quemaravilla",
+	"icons": [{
+		"src": "icons/favicon.ico",
+		"sizes": "64x64",
+		"type": "image/webp"
+	}, {
+		"src": "icons/favicon.ico",
+		"sizes": "64x64"
+	}, {
+		"src": "icons/favicon.ico",
+		"sizes": "128x128"
+	}],
+	"scope": "/racer/",
+	"start_url": "/racer/start.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"theme_color": "aliceblue",
+	"background_color": "#0084ff",
+	"screenshots": [{
+		"src": "screenshots/in-game-1x.jpg",
+		"sizes": "640x480",
+		"type": "image/jpeg"
+	}, {
+		"src": "screenshots/in-game-2x.jpg",
+		"sizes": "1280x920",
+		"type": "image/jpeg"
+	}]
+}
