@@ -16,5 +16,5 @@ var cb = function(err, result) {
 };
 
 exports.calculateAndDisplayRoute = function(query, callback) {
-	return gmaputil.directions(query.origin, query.destination, null, cb);
+	return gmaputil.directions(query.origin, query.destination, {mode: 'driving', key: 'AIzaSyBfXWyGvlk7JQDZBZTpQWoA0QQzaXWhY0Q'}, cb, null, true);
 }
