@@ -17,6 +17,7 @@ bot.on('message', (payload, reply) =>{
 	var sender = payload.sender;
 
 	var cmd = conversation.reply(message.text, function(err, context, payload){
+		console.log(JSON.stringify(payload,null,2));
 		if(!err && context){
 			var executable = filterCommand(context);
             if(executable) {
