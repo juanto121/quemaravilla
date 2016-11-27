@@ -112,10 +112,10 @@ function location(user, context, payload){
         url: url,
         method:'POST',
         json: data
-    }, function(err, res, body){
-        if(err && body){
+    }, function(err, res, body) {
+        if (err && body) {
             console.log('error','Error while using personality insights', err);
-        }else{
+        } else {
         	var big5 = body.raw_v3_response.personality;
         	var personality = [];
         	for(var i = 0; i < big5.length; i++){

@@ -5,8 +5,8 @@ var tradeoff_analytics = new TradeoffAnalyticsV1({
     password: 'fsnAqVJMn4Ls'
 });
 
-exports.pareto = function(origin, personality, callback){
-    if (origin === 'ibis'){
+exports.pareto = function(origin, personality, callback) {
+    if (origin === 'ibis') {
         var params = require('./data/TOA_ibis.json');
     } else{
         var params = require('./data/TOA_hotel_10.json');
