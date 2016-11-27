@@ -1,3 +1,26 @@
+function initMap() {
+	var directionsService = new google.maps.DirectionsService;
+	var directionsDisplay = new google.maps.DirectionsRenderer;
+
+	var onChangeHandler = function() {
+		calculateAndDisplayRoute(directionsService, directionsDisplay);
+	};
+}
+
+function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+	directionsService.route({
+		origin : 'Hotel%20Ibis%20Medellin,%20Ciudad%20del%20Rio,%20Medellin%20-%20Antioquia',
+		destination : '%20de%20Antioquia',
+		travelMode : google.maps.TravelMode.DRIVING
+	}, function(response, status) {
+		if (status === google.maps.DirectionsStatus.OK) {
+			directionsDisplay.setDirections(response);
+		} else {
+			window.alert('Directions request failed due to ' + status);
+		}
+	});
+}
+
 // Flexslider
 $(function() {
 	/* FlexSlider */
