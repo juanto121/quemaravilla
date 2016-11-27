@@ -108,11 +108,18 @@ exports.element = function (content){
     };
 };
 
-exports.button = function(content){
+exports.urlButton = function(content){
     return {
-        type:'postback',
+        type:'web_url',
         title: content.title,
         payload: content.payload
     };
 };
 
+exports.postButton = function(content){
+    return {
+        type:'postback',
+        title:content.title,
+        payload:content.payload
+    };
+};

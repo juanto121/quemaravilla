@@ -124,9 +124,12 @@ function location(user, context, payload){
         	var location = context["location"];
         	tradeoff.pareto(location, personality, function(err, results){
         		var elements = [];
-        		for(var i = 0; i < results.length;i++){
-                    var button = sender.button({title:'Ver más información',payload:results[i]});
-                    var element = sender.element({title:results[i],buttons:[button]});
+        		for(var k = 0; k < results.length;k++){
+                    var placeName = results[k].name;
+                    var details = tradeoff.getOptionDetails(location,placeName);
+                    var postButton = sender.postButton({title:'Más información',payload:details.name});
+                    //var urlButton = sender.urlButton({title:'Ir a la página.',web_url:details.url});
+                    var element = sender.element({title:placeName,buttons:[postButton]});
 					elements.push(element);
                 }
                 var generic = sender.genericTemplate({elements:elements});
