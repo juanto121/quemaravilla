@@ -2,7 +2,7 @@
 	"lang": "es",
 	"dir": "ltr",
 	"name": "quemaravilla",
-	"description": "#HackatonCognitivo ¡Qué maravilla!",
+	"description": "#HackatonCognitivo Que maravilla!",
 	"short_name": "quemaravilla",
 	"icons": [{
 		"src": "icons/favicon.ico",
@@ -14,9 +14,12 @@
 	}, {
 		"src": "icons/favicon.ico",
 		"sizes": "128x128"
+	}, {
+		"src": "images/quemaravillalogo.png",
+		"sizes": "144x144"
 	}],
-	"scope": "/racer/",
-	"start_url": "/racer/start.html",
+	"scope": "./",
+	"start_url": "./",
 	"display": "fullscreen",
 	"orientation": "landscape",
 	"theme_color": "aliceblue",
