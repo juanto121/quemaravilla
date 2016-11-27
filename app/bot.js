@@ -4,6 +4,7 @@ const conversation = require('./conversation');
 const sender = require('./sender-api');
 const request = require('request');
 const tradeoff = require('./tradeoff');
+const pbox = require('./pbox');
 
 let bot = new Bot({
 	token: 'EAAPH7WFMNukBALug5SsH84GnZCdZAhjBc5sl5GIjJZAPMRBDscZCrVwxna9Yc2teL9iOrH1ierh5WWNoeZBLSLdOvlI2h1JWRwIgLlkXNEjxPVY97qYHZBz7B052obZCsPqyFraclv2fqTBwm58uubjhUViuuxazVyrJRhYdlV4zwZDZD',
@@ -22,7 +23,6 @@ bot.on('message', (payload, reply) =>{
                 bot.getProfile(sender.id, function(err, profile){
                 	if(!err)
                 		context.userProfile = profile;
-
                     var result = executable(sender.id, context, payload);
                     if(result){
                         bot.sendMessage(sender.id, result.message, function (err, info) {
@@ -69,14 +69,16 @@ function filterCommand(context){
 		case 'time':
 			executable = time;
 			break;
-
+		case 'thanks':
+			executable = bye;
+			break;
 	}
 	return executable;
 }
 
 function greeting(user, context){
 	var userName = context.userProfile;
-	var content = sender.plainText("Hola "+ userName.first_name + "!, contame cuánto tiempo 📅 tenés y te diré que podes hacer!");
+	var content = sender.plainText("Hola "+ userName.first_name + "!, decime cuánto tiempo tenés y te diré que podés hacer!  📅 ");
 	var message = sender.headerMessage(user,content);
 	return message;
 }
@@ -85,8 +87,22 @@ function party(user, context){
 	var content = sender.plainText("Fiesta? donde?");
 	bot.sendMessage(user, content, function(err, info){if(!err){}else{}
 		var gif = sender.image('https://media.giphy.com/media/CndhbyVs2BLTW/giphy.gif');
-		bot.sendMessage(user, gif, null);
-		bot.sendMessage(user, sender.plainText("Misión cumplida!"));
+		bot.sendMessage(user, gif, function(err, info){
+			if(!err){
+                pbox.startParty();
+                bot.sendMessage(user, sender.plainText("Misión cumplida!"));
+			}
+		});
+	});
+}
+
+function bye(user, context){
+	var content = sender.plainText("PUMM!");
+	bot.sendMessage(user, content, function(err, info){
+		if(!err){
+			pbox.stopParty();
+			console.log("Sent", info);
+		}
 	});
 }
 
@@ -109,7 +125,7 @@ function location(user, context, payload){
 
 	//Personality Insights call
 	const url = 'http://personality-insights-nodejs-promo-1810.mybluemix.net/api/profile/twitter';
-	var data = {"source_type":"twitter","accept_language":"en","include_raw":false,"language":"ja","userId":"faridyu"};
+	var data = {"source_type":"twitter","accept_language":"en","include_raw":false,"language":"en","userId":"KingJames"};
 
     request({
         url: url,
@@ -121,18 +137,25 @@ function location(user, context, payload){
         } else {
         	var big5 = body.raw_v3_response.personality;
         	var personality = [];
+        	var duration = Number(context.duration);
+
+        	personality.push(1);
+        	personality.push(1/duration);
+
         	for(var i = 0; i < big5.length; i++){
-				personality.push(big5[i].percentile);
+				personality.push(big5[i].percentile/duration);
 			}
         	var location = context["location"];
         	tradeoff.pareto(location, personality, function(err, results){
+        		console.log('PARETO:', results.length, JSON.stringify(results));
+
         		var elements = [];
         		for(var k = 0; k < results.length; k++){
                     var placeName = results[k].name;
                     var details = tradeoff.getOptionDetails(location,placeName);
 
                     var postButton = sender.postButton({title:'Más información',payload:placeName});
-                    var urlButton = sender.urlButton({title:'Ir a la página.',web_url:details.site});
+                    //var urlButton = sender.urlButton({title:'Ir a la página.',web_url:details.site});
                     var element = sender.element({title:placeName,buttons:[postButton], imageUrl:details.url});
 					elements.push(element);
                 }
