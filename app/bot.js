@@ -160,7 +160,7 @@ function location(user, context, payload){
 
                     var postButton = sender.postButton({title:'Más información',payload:placeName});
                     //var urlButton = sender.urlButton({title:'Ir a la página.',web_url:details.site});
-                    var element = sender.element({title:placeName,buttons:[postButton], imageUrl:details.url});
+                    var element = sender.element({title:placeName, imageUrl:details.url});
 					elements.push(element);
                 }
 
