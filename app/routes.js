@@ -17,7 +17,6 @@ module.exports = function(app) {
 	});
 
 	app.post('/map/getDirections', (req, res) => {
-		console.log('req: ' + JSON.stringify(req.body));
 		return map.calculateAndDisplayRoute(req.body, res);
 	});
 };

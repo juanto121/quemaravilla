@@ -22,7 +22,6 @@ exports.reply = function(message, callback){
 			console.log(JSON.stringify(res));
 
 			saveContextIntent(res);
-
 			if(convContext && convContext.command){
 				cmd = convContext.command;
 				if(context){
