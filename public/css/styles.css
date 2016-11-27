@@ -229,6 +229,45 @@ p {
 	padding-bottom: 14px;
 }
 
+#contact .row .col-md-4.wow {
+	padding-bottom: 20px;
+}
+
+#contact .fuentes {
+	padding-top: 35px;
+}
+
+#contact .fuentes a {
+	color: #fff;
+	display: inline-block;
+	opacity: .7;
+	-webkit-transition: opacity ease .3s;
+	-o-transition: opacity ease .3s;
+	transition: opacity ease .3s;
+}
+
+#contact .fuentes a:hover {
+	opacity: 1;
+}
+
+#contact .fuentes a .github {
+	background: url(../images/GitHub-Mark-Light-32px.png) no-repeat 0 0 transparent;
+	display: block;
+	float: left;
+	height: 32px;
+	width: 32px;
+}
+
+#contact .fuentes a .service {
+	float: left;
+	padding-left: 10px;
+	line-height: 13px;
+}
+#contact .fuentes a .service small {
+	clear: both;
+	float: left;
+}
+
 #contact .form-control {
 	background: #f2f2f2;
 	border-radius: 4px;
