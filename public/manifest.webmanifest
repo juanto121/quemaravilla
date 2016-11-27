@@ -14,9 +14,12 @@
 	}, {
 		"src": "icons/favicon.ico",
 		"sizes": "128x128"
+	}, {
+		"src": "images/quemaravillalogo.png",
+		"sizes": "144x144"
 	}],
 	"scope": "./",
-	"start_url": "/racer/start.html",
+	"start_url": "./",
 	"display": "fullscreen",
 	"orientation": "landscape",
 	"theme_color": "aliceblue",
