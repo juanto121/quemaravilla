@@ -106,7 +106,7 @@ function location(user, context, payload){
 
 	//Personality Insights call
 	const url = 'http://personality-insights-nodejs-promo-1810.mybluemix.net/api/profile/twitter';
-	var data = {"source_type":"twitter","accept_language":"en","include_raw":false,"language":"ja","userId":"KingJames"};
+	var data = {"source_type":"twitter","accept_language":"en","include_raw":false,"language":"ja","userId":"faridyu"};
 
     request({
         url: url,
@@ -124,11 +124,15 @@ function location(user, context, payload){
         	var location = context["location"];
         	tradeoff.pareto(location, personality, function(err, results){
         		var elements = [];
-        		for(var i = 0; i < results.length;i++){
-                    var button = sender.button({title:'Ver más información',payload:results[i]});
-                    var element = sender.element({title:results[i],buttons:[button]});
+        		for(var k = 0; k < results.length; k++){
+                    var placeName = results[k].name;
+                    var details = tradeoff.getOptionDetails(location,placeName);
+                    var postButton = sender.postButton({title:'Más información',payload:placeName});
+                    //var urlButton = sender.urlButton({title:'Ir a la página.',web_url:details.url});
+                    var element = sender.element({title:placeName,buttons:[postButton], imageUrl:details.url});
 					elements.push(element);
                 }
+
                 var generic = sender.genericTemplate({elements:elements});
                 bot.sendMessage(user, generic, function (err, info) {
                     if (!err && info) {
