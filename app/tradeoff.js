@@ -39,7 +39,7 @@ exports.getOptionDetails = function(origin, name){
     var option = null;
     for(var i = 0; i < options.length; i++){
         option = options[i];
-        if(name === name){
+        if(option.name === name){
             details = {
                 name:option.name,
                 url:option.url,

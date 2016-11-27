@@ -46,7 +46,7 @@ exports.genericTemplate = function (content){
     var len = content.elements.length;
     for (var i=0; i< len; i++){
         var item = content.elements[i];
-        elements.push(exports.element(item));
+        elements.push(item);
     }
     return {
         attachment: {
@@ -101,9 +101,7 @@ exports.receipt = function (content){
 exports.element = function (content){
     return {
         title: content.title,
-        item_url: content.url,
         image_url: content.imageUrl,
-        subtitle: content.subtitle,
         buttons: content.buttons,
     };
 };
