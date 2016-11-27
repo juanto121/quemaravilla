@@ -83,8 +83,11 @@ function greeting(user, context){
 
 function party(user, context){
 	var content = sender.plainText("Fiesta? donde?");
-	var message = sender.headerMessage(user, content);
-	return message;
+	bot.sendMessage(user, content, function(err, info){if(!err){}else{}
+		var gif = sender.image('https://media.giphy.com/media/CndhbyVs2BLTW/giphy.gif');
+		bot.sendMessage(user, gif, null);
+		bot.sendMessage(user, sender.plainText("Misión cumplida!"));
+	});
 }
 
 function time(user, context){
@@ -127,8 +130,9 @@ function location(user, context, payload){
         		for(var k = 0; k < results.length; k++){
                     var placeName = results[k].name;
                     var details = tradeoff.getOptionDetails(location,placeName);
+
                     var postButton = sender.postButton({title:'Más información',payload:placeName});
-                    //var urlButton = sender.urlButton({title:'Ir a la página.',web_url:details.url});
+                    var urlButton = sender.urlButton({title:'Ir a la página.',web_url:details.site});
                     var element = sender.element({title:placeName,buttons:[postButton], imageUrl:details.url});
 					elements.push(element);
                 }
