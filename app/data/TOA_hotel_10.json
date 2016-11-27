@@ -125,8 +125,8 @@
       "url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSmzDx2XufXiRBu1lbg1PJfdg2VfBicB50rzF-ThQ5YukkhC0ST3g",
       "site": "parquearvi.org/",
       "values": {
-        "distance": 50,
-        "time": 30,
+        "distance": 10,
+        "time": 10,
         "agreeableness": 0.99,
         "conscientiousness": 0.01,
         "extraversion":0.01,
@@ -143,7 +143,7 @@
       "values": {
         "distance": 5,
         "time": 25,
-        "agreeableness": 0.99,
+        "agreeableness": 0.5,
         "conscientiousness": 0.99,
         "extraversion":0.99,
         "emotionalRange": 0.01,
@@ -173,13 +173,13 @@
       "url": "http://revistaaxxis.com.co/wp-content/uploads/2015/10/revista-axxis-mamm-fachada-nocturna.jpg",
       "site": "elmamm.org/",
       "values": {
-        "distance": 2,
-        "time": 15,
+        "distance": 50,
+        "time": 30,
         "agreeableness": 0.99,
-        "conscientiousness": 0.99,
-        "extraversion":0.2,
-        "emotionalRange": 0.99,
-        "opennes": 0.9
+        "conscientiousness": 0.01,
+        "extraversion":0.01,
+        "emotionalRange": 0.01,
+        "opennes": 0.99
       }
     },
     {
@@ -189,13 +189,13 @@
       "url": "http://paraglidingmedellin.com/images/sanfelix-paragliding.jpg",
       "site": "www.parapenteencolombia.com/",
       "values": {
-        "distance": 40,
-        "time": 70,
-        "agreeableness": 0.01,
-        "conscientiousness": 0.01,
+        "distance": 100,
+        "time": 120,
+        "agreeableness": 0.99,
+        "conscientiousness": 0.99,
         "extraversion":0.99,
-        "emotionalRange": 0.99,
-        "opennes": 0.01
+        "emotionalRange": 0.7,
+        "opennes": 0.8
       }
     },
     {
@@ -221,13 +221,13 @@
       "url": "http://www.venomelitepaintball.com/images/pro_kids_pb.jpg",
       "site": "www.prokidspb.com",
       "values": {
-        "distance": 40,
-        "time": 40,
+        "distance": 10,
+        "time": 10,
         "agreeableness": 0.99,
         "conscientiousness": 0.99,
         "extraversion":0.99,
-        "emotionalRange": 0.99,
-        "opennes": 0.99
+        "emotionalRange": 0.7,
+        "opennes": 0.8
       }
     },
     {
@@ -269,13 +269,13 @@
       "url": "https://media-cdn.tripadvisor.com/media/photo-s/01/ef/31/c6/el-castillo-fachada.jpg",
       "site": "www.museoelcastillo.org/",
       "values": {
-        "distance": 2,
-        "time": 7,
+        "distance": 1,
+        "time": 3,
         "agreeableness": 0.99,
-        "conscientiousness": 0.8,
-        "extraversion":0.2,
-        "emotionalRange": 0.8,
-        "opennes": 0.2
+        "conscientiousness": 0.9,
+        "extraversion":0.1,
+        "emotionalRange": 0.95,
+        "opennes": 0.8
       }
     } 
   ]

@@ -93,8 +93,8 @@
       "url": "http://www.hotelsanpedrodelfuerte.com/wp-content/uploads/2016/07/museo-de-antioquia-en-medellin.jpg",
       "site": "https://www.museodeantioquia.co/",
       "values": {
-        "distance": 9,
-        "time": 30,
+        "distance": 10,
+        "time": 40,
         "agreeableness": 0.99,
         "conscientiousness": 0.99,
         "extraversion":0.01,
@@ -109,8 +109,8 @@
       "url": "http://rumbiaderos.com/wp-content/uploads/2016/07/explora.jpg",
       "site": "www.parqueexplora.org/",
       "values": {
-        "distance": 5,
-        "time": 20,
+        "distance": 7,
+        "time": 30,
         "agreeableness": 0.01,
         "conscientiousness": 0.99,
         "extraversion":0.5,
@@ -125,8 +125,8 @@
       "url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSmzDx2XufXiRBu1lbg1PJfdg2VfBicB50rzF-ThQ5YukkhC0ST3g",
       "site": "parquearvi.org/",
       "values": {
-        "distance": 45,
-        "time": 25,
+        "distance": 50,
+        "time": 30,
         "agreeableness": 0.99,
         "conscientiousness": 0.01,
         "extraversion":0.01,
@@ -141,9 +141,9 @@
       "url": "http://www.viztaz.com.co/gantigua/galleries/Contemporaneas/plazamayor/1103670.jpg",
       "site": "www.plazamayor.com.co/",
       "values": {
-        "distance": 3,
-        "time": 5,
-        "agreeableness": 0.99,
+        "distance": 5,
+        "time": 25,
+        "agreeableness": 0.5,
         "conscientiousness": 0.99,
         "extraversion":0.99,
         "emotionalRange": 0.01,
@@ -157,8 +157,8 @@
       "url": "http://www.discovercolombia.com/wp-content/uploads/2010/10/pueblito_paisa_medellin.jpg",
       "site": "www.guiatodo.com.co/Sitio/medellin/pueblito_paisa",
       "values": {
-        "distance": 4,
-        "time": 5,
+        "distance": 7,
+        "time": 20,
         "agreeableness": 0.99,
         "conscientiousness": 0.99,
         "extraversion":0.99,
@@ -173,13 +173,13 @@
       "url": "http://revistaaxxis.com.co/wp-content/uploads/2015/10/revista-axxis-mamm-fachada-nocturna.jpg",
       "site": "elmamm.org/",
       "values": {
-        "distance": 1,
-        "time": 1,
+        "distance": 10,
+        "time": 10,
         "agreeableness": 0.99,
-        "conscientiousness": 0.99,
-        "extraversion":0.2,
-        "emotionalRange": 0.99,
-        "opennes": 0.9
+        "conscientiousness": 0.01,
+        "extraversion":0.01,
+        "emotionalRange": 0.01,
+        "opennes": 0.99
       }
     },
     {
@@ -189,13 +189,13 @@
       "url": "http://paraglidingmedellin.com/images/sanfelix-paragliding.jpg",
       "site": "www.parapenteencolombia.com/",
       "values": {
-        "distance": 38,
-        "time": 68,
-        "agreeableness": 0.9,
-        "conscientiousness": 0.01,
+        "distance": 10,
+        "time": 10,
+        "agreeableness": 0.99,
+        "conscientiousness": 0.99,
         "extraversion":0.99,
-        "emotionalRange": 0.99,
-        "opennes": 0.9
+        "emotionalRange": 0.7,
+        "opennes": 0.8
       }
     },
     {
@@ -205,8 +205,8 @@
       "url": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTxJzTLkRzA8XGx2hZnEjeqi37ZKIJK9TL0oXfU6X1F7TDG7BVS9w",
       "site": "www.cementeriosanpedro.org.co/",
       "values": {
-        "distance": 5,
-        "time": 25,
+        "distance": 1,
+        "time": 3,
         "agreeableness": 0.99,
         "conscientiousness": 0.9,
         "extraversion":0.1,
@@ -221,13 +221,13 @@
       "url": "http://www.venomelitepaintball.com/images/pro_kids_pb.jpg",
       "site": "www.prokidspb.com",
       "values": {
-        "distance": 35,
-        "time": 30,
+        "distance": 100,
+        "time": 120,
         "agreeableness": 0.99,
         "conscientiousness": 0.99,
         "extraversion":0.99,
-        "emotionalRange": 0.99,
-        "opennes": 0.99
+        "emotionalRange": 0.7,
+        "opennes": 0.8
       }
     },
     {
@@ -238,11 +238,11 @@
       "site": "https://eltesoro.com.co/",
       "values": {
         "distance": 3,
-        "time": 15,
-        "agreeableness": 0.9,
+        "time": 1,
+        "agreeableness": 0.99,
         "conscientiousness": 0.9,
-        "extraversion":0.9,
-        "emotionalRange": 0.2,
+        "extraversion":0.1,
+        "emotionalRange": 0.95,
         "opennes": 0.8
       }
     },
@@ -253,8 +253,8 @@
       "url": "http://www.portafolio.co/files/article_main/uploads/2016/02/06/56b66bb090336.jpeg",
       "site": "https://es.wikipedia.org/wiki/Casa_Museo_Gardeliana",
       "values": {
-        "distance": 7,
-        "time": 30,
+        "distance": 8,
+        "time": 35,
         "agreeableness": 0.6,
         "conscientiousness": 0.2,
         "extraversion":0.2,
@@ -269,13 +269,13 @@
       "url": "https://media-cdn.tripadvisor.com/media/photo-s/01/ef/31/c6/el-castillo-fachada.jpg",
       "site": "www.museoelcastillo.org/",
       "values": {
-        "distance": 3,
-        "time": 15,
+        "distance": 6,
+        "time": 35,
         "agreeableness": 0.99,
-        "conscientiousness": 0.8,
-        "extraversion":0.2,
-        "emotionalRange": 0.8,
-        "opennes": 0.2
+        "conscientiousness": 0.9,
+        "extraversion":0.1,
+        "emotionalRange": 0.95,
+        "opennes": 0.8
       }
     }  
   ]
