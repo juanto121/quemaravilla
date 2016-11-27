@@ -15,7 +15,7 @@
 		"src": "icons/favicon.ico",
 		"sizes": "128x128"
 	}],
-	"scope": "/racer/",
+	"scope": "./",
 	"start_url": "/racer/start.html",
 	"display": "fullscreen",
 	"orientation": "landscape",
