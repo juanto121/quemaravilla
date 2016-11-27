@@ -9,11 +9,16 @@ var tradeoff_analytics = new TradeoffAnalyticsV1({
 
 exports.pareto = function(origin, personality, callback){
     var params = ibis;
-    if (origin === 'ibis'){
+    if (origin === 'hotel_ibis'){
         params = ibis;
+        params[0] = ibis.options[0].values.distance;
+        params[1] = ibis.options[0].values.time;
     } else{
         params = hotel_10;
+        params[0] = hotel_10.options[0].distance;
+        params[1] = hotel_10.options[1].time;
     }
+    console.log(params);
 
     var result = linearTransformation(personality, params);
 

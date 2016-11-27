@@ -146,6 +146,9 @@ function location(user, context, payload){
         	for(var i = 0; i < big5.length; i++){
 				personality.push(big5[i].percentile/duration);
 			}
+
+			console.log(personality);
+
         	var location = context["location"];
         	tradeoff.pareto(location, personality, function(err, results){
         		console.log('PARETO:', results.length, JSON.stringify(results));
