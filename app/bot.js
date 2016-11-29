@@ -7,8 +7,8 @@ const tradeoff = require('./tradeoff');
 const pbox = require('./pbox');
 
 let bot = new Bot({
-	token: 'EAAPH7WFMNukBALug5SsH84GnZCdZAhjBc5sl5GIjJZAPMRBDscZCrVwxna9Yc2teL9iOrH1ierh5WWNoeZBLSLdOvlI2h1JWRwIgLlkXNEjxPVY97qYHZBz7B052obZCsPqyFraclv2fqTBwm58uubjhUViuuxazVyrJRhYdlV4zwZDZD',
-	verify: 'verification_token'
+	token: process.env.QUEMARAVILLA_ACCESS_TOKEN,
+	verify: process.env.QUEMARAVILLA_VERIFY_TOKEN
 });
 
 bot.on('message', (payload, reply) =>{
@@ -71,10 +71,20 @@ function filterCommand(context){
 			executable = time;
 			break;
 		case 'thanks':
+			executable = thanks;
+			break;
+		case 'bye':
 			executable = bye;
 			break;
 	}
 	return executable;
+}
+
+function thanks(user,context){
+	var userName = context.userProfile;
+	var content = sender.plainText("Nombe "+ userName.first_name + "!, pa' eso estamos.");
+	var message = sender.headerMessage(user, content);
+	return message;
 }
 
 function greeting(user, context){
@@ -120,9 +130,10 @@ function duration(user, context, payload){
 }
 
 function location(user, context, payload){
-	var content = sender.plainText("Voy a buscar los mejores sitios para ir en estos " + context.duration + " dias.");
+
+	var updatedContext = conversation.getContext();
+	var content = sender.plainText("Voy a buscar los mejores sitios para ir en estos " + updatedContext.duration + " dias.");
 	var message = sender.headerMessage(user, content);
-	console.log('CONTEXT:' + JSON.stringify(conversation.getContext()));
 
 	//Personality Insights call
 	const url = 'http://personality-insights-nodejs-promo-1810.mybluemix.net/api/profile/twitter';
@@ -138,18 +149,18 @@ function location(user, context, payload){
         } else {
         	var big5 = body.raw_v3_response.personality;
         	var personality = [];
-        	var duration = Number(context.duration);
+        	var duration = Number(updatedContext.duration);
 
         	personality.push(1);
-        	personality.push(1/duration);
+        	personality.push(1);
 
         	for(var i = 0; i < big5.length; i++){
-				personality.push(big5[i].percentile/duration);
+				personality.push(big5[i].percentile);
 			}
 
 			console.log(personality);
 
-        	var location = context["location"];
+        	var location = updatedContext["location"];
         	tradeoff.pareto(location, personality, function(err, results){
         		console.log('PARETO:', results.length, JSON.stringify(results));
 

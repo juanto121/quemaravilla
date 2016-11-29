@@ -16,7 +16,7 @@ exports.pareto = function(origin, personality, callback){
     } else{
         params = hotel_10;
         params[0] = hotel_10.options[0].distance;
-        params[1] = hotel_10.options[1].time;
+        params[1] = hotel_10.options[0].time;
     }
     console.log(params);
 
